@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stock List</title>
-  <script>
-    const apiKey = '';
-    const symbols = ['AAPL', 'MSFT', 'GOOGL', 'TSLA', 'AMZN', 'NIFTY']; 
-
-    async function getStockData(symbol) {
-      const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${apiKey}`);
-      const data = await res.json();
-      return {
-        symbol: symbol,
-        price: data.c,
-        high: data.h,
-        low: data.l,
-      };
-    }
-
-    async function loadStocks() {
-      const container = document.getElementById("stock-list");
-      for (let symbol of symbols) {
-        const stock = await getStockData(symbol);
-        const item = document.createElement("li");
-        item.innerHTML = `<strong>${stock.symbol}</strong> - Price: $${stock.price} | High: $${stock.high} | Low: $${stock.low}`;
-        container.appendChild(item);
-      }
-    }
-
-    window.onload = loadStocks;
-  </script>
+  <title>TradeIt &mdash; Explore the markets</title>
+  <link rel="icon" href="tradeit_logo1.png">
+  <link rel="stylesheet" href="home_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <h2>new</h2>
-  <ul id="stock-list"></ul>
+  <nav class="heading">
+    <div class="logo-menu">
+      <img class="logo" src="tradeit_logo1.png">
+      <img class="name" src="tradeit_name.png">
+    </div>
+
+    <div class="middle-content"></div>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </div>
+  </nav>
 </body>
 </html>

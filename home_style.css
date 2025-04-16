@@ -1,0 +1,64 @@
+*{
+    height: 500px;
+}
+body .heading{
+    background-color: black;
+    display: flex;
+    height: 60px;
+}
+
+body{
+    margin: 0;
+}
+
+nav{
+    margin-top: 0;
+}
+.logo-menu{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    vertical-align: middle;
+}
+.logo{
+    height: 22px;
+    align-items: center;
+
+}
+
+.name{
+    height: 20px
+}
+
+.middle-content{
+    display: flex;
+    flex-grow: 1;
+    margin:0 32px;
+    align-items: center;
+    justify-content: center;
+    height:60px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #2e2e2e;
+    color: #ccc;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: sans-serif;
+
+}
+
+.search-box i {
+    margin-right: 10px;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.search-box span {
+    color: #ccc;
+    height:20px
+}
